@@ -33,9 +33,10 @@ Package: pdftexcmds ....-..-.. v... Utility functions of pdfTeX for LuaTeX (HO)
 Package: ifpdf ....-..-.. v... Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode not found.
 )
 (../atveryend.sty
 Package: atveryend ....-..-.. v... Hooks at the very end of document (HO)
