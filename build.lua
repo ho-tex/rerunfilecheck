@@ -13,7 +13,7 @@ installfiles = {
 textfiles = {"README.md"}
 unpackfiles = {'rerunfilecheck.dtx'}
 
-packtdszip  = true
+packtdszip  = false
 
 maxprintline=10000
 checkruns = 2
