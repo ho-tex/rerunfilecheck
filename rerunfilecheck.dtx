@@ -1,12 +1,12 @@
 % \iffalse meta-comment
 %
 % File: rerunfilecheck.dtx
-% Version: 2019/12/05 v1.9
+% Version: 2022-07-10 v1.10
 % Info: Rerun checks for auxiliary files
 %
 % Copyright (C)
 %    2009-2011 Heiko Oberdiek
-%    2016-2019 Oberdiek Package Support Group
+%    2016-2022 Oberdiek Package Support Group
 %    https://github.com/ho-tex/rerunfilecheck/issues
 %
 % This work may be distributed and/or modified under the
@@ -82,7 +82,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)}
+\Msg{* Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -94,11 +94,11 @@
 This is a generated file.
 
 Project: rerunfilecheck
-Version: 2019/12/05 v1.9
+Version: 2022-07-10 v1.10
 
 Copyright (C)
    2009-2011 Heiko Oberdiek
-   2016-2019 Oberdiek Package Support Group
+   2016-2022 Oberdiek Package Support Group
 
 This work may be distributed and/or modified under the
 conditions of the LaTeX Project Public License, either
@@ -161,7 +161,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{rerunfilecheck.drv}%
-  [2019/12/05 v1.9 Rerun checks for auxiliary files (HO)]%
+  [2022-07-10 v1.10 Rerun checks for auxiliary files (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \begin{document}
@@ -175,7 +175,7 @@ and the derived files
 % \GetFileInfo{rerunfilecheck.drv}
 %
 % \title{The \xpackage{rerunfilecheck} package}
-% \date{2019/12/05 v1.9}
+% \date{2022-07-10 v1.10}
 % \author{Heiko Oberdiek\thanks
 % {Please report any issues at \url{https://github.com/ho-tex/rerunfilecheck/issues}}}
 %
@@ -355,7 +355,7 @@ and the derived files
 %    \begin{macrocode}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{rerunfilecheck}%
-  [2019/12/05 v1.9 Rerun checks for auxiliary files (HO)]
+  [2022-07-10 v1.10 Rerun checks for auxiliary files (HO)]
 %    \end{macrocode}
 %
 % \subsection{Options}
@@ -535,7 +535,7 @@ and the derived files
       \let\makeglossary\@empty
     }%
     \ifx\ReFiCh@temp\makeglossary
-      \def\ReFiCh@temp{%
+      \def\makeglossary{%
         \newwrite\@glossaryfile
         \RerunFileCheck{\jobname.glo}{%
           \immediate\closeout\@glossaryfile
@@ -912,6 +912,9 @@ and the derived files
 %   \begin{Version}{2019/12/05 v1.9}
 %   \item
 %     Documentation updates.
+%   \end{Version}
+%   \begin{Version}{2022-07-10 v1.10}
+%   \item Correct glossary option, see github issue \#1
 %   \end{Version}
 % \end{History}
 %
