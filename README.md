@@ -1,6 +1,6 @@
 # rerunfilecheck
 
-Version: 2022-07-10 v1.10
+Version: 2025-06-21 v1.11
 
 
 The package provides additional rerun warnings if some
@@ -9,7 +9,7 @@ provided by pdfTeX, luatex, xetex.
 
 ## Copyright (C)
 *    2009-2011 Heiko Oberdiek
-*    2016-2022 Oberdiek Package Support Group
+*    2016-2025 Oberdiek Package Support Group
 
 ## License
 LATEX Project Public License, version 1.3c or later.

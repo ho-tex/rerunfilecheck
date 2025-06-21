@@ -1,12 +1,12 @@
 % \iffalse meta-comment
 %
 % File: rerunfilecheck.dtx
-% Version: 2022-07-10 v1.10
+% Version: 2025-06-21 v1.11
 % Info: Rerun checks for auxiliary files
 %
 % Copyright (C)
 %    2009-2011 Heiko Oberdiek
-%    2016-2022 Oberdiek Package Support Group
+%    2016-2025 Oberdiek Package Support Group
 %    https://github.com/ho-tex/rerunfilecheck/issues
 %
 % This work may be distributed and/or modified under the
@@ -82,7 +82,7 @@
 \input docstrip.tex
 \Msg{************************************************************************}
 \Msg{* Installation}
-\Msg{* Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)}
+\Msg{* Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)}
 \Msg{************************************************************************}
 
 \keepsilent
@@ -94,11 +94,11 @@
 This is a generated file.
 
 Project: rerunfilecheck
-Version: 2022-07-10 v1.10
+Version: 2025-06-21 v1.11
 
 Copyright (C)
    2009-2011 Heiko Oberdiek
-   2016-2022 Oberdiek Package Support Group
+   2016-2025 Oberdiek Package Support Group
 
 This work may be distributed and/or modified under the
 conditions of the LaTeX Project Public License, either
@@ -161,7 +161,7 @@ and the derived files
 %<*driver>
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesFile{rerunfilecheck.drv}%
-  [2022-07-10 v1.10 Rerun checks for auxiliary files (HO)]%
+  [2025-06-21 v1.11 Rerun checks for auxiliary files (HO)]%
 \documentclass{ltxdoc}
 \usepackage{holtxdoc}[2011/11/22]
 \begin{document}
@@ -175,7 +175,7 @@ and the derived files
 % \GetFileInfo{rerunfilecheck.drv}
 %
 % \title{The \xpackage{rerunfilecheck} package}
-% \date{2022-07-10 v1.10}
+% \date{2025-06-21 v1.11}
 % \author{Heiko Oberdiek\thanks
 % {Please report any issues at \url{https://github.com/ho-tex/rerunfilecheck/issues}}}
 %
@@ -267,7 +267,7 @@ and the derived files
 % an output file is opened for writing. The macro first remembers
 % the current checksum of \meta{file}.
 % The file is checked again right before the end of the job.
-% Macro \cs{AtVeryEndDocument} of package \xpackage{atveryend}
+% The LaTeX hook \texttt{enddocument/info}
 % is used to place the check after the main aux file is closed
 % in |\end{document}|. Before reading the file again, it must be
 % closed. Provide the code for closing in argument \meta{file closing action}.
@@ -355,7 +355,7 @@ and the derived files
 %    \begin{macrocode}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{rerunfilecheck}%
-  [2022-07-10 v1.10 Rerun checks for auxiliary files (HO)]
+  [2025-06-21 v1.11 Rerun checks for auxiliary files (HO)]
 %    \end{macrocode}
 %
 % \subsection{Options}
@@ -570,7 +570,6 @@ and the derived files
 % \subsection{Rerun check}
 %
 %    \begin{macrocode}
-\RequirePackage{atveryend}[2019/12/05]
 \RequirePackage{uniquecounter}[2009/12/18]
 %    \end{macrocode}
 %
@@ -637,7 +636,7 @@ and the derived files
 %    \begin{macrocode}
 \def\ReFiCh@@RerunFileCheck#1#2#3#4{%
   \ReFiCh@Check\global#1{#2}%
-  \AtEndAfterFileList{%
+  \AddToHook{enddocument/info}{%
     \begingroup
       #3%
       \ReFiCh@Check{}\x{#2}%
@@ -898,6 +897,9 @@ and the derived files
 %   \end{Version}
 %   \begin{Version}{2022-07-10 v1.10}
 %   \item Correct glossary option, see github issue \#1
+%   \end{Version}
+%   \begin{Version}{2025-06-21 v1.11}
+%   \item Remove dependency from atveryend package and use LaTeX hooks instead.
 %   \end{Version}
 % \end{History}
 %
